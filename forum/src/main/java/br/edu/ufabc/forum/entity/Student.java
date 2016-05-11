@@ -13,7 +13,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 @Entity
-@PrimaryKeyJoinColumn(name="collaborator_id", referencedColumnName="id")
+@PrimaryKeyJoinColumn(name="collaborator", referencedColumnName="username")
 public class Student extends Collaborator {
 
 	private static final long serialVersionUID = 4169815493722760334L;

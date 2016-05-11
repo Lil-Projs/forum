@@ -1,12 +1,18 @@
 spring:
+  #Datasource
   datasource:
     url: jdbc:mysql://localhost:3306/forum
     username: root
     password: root
+  #JPA
   jpa:
     show-sql: false
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
+  #Thymeleaf
+  thymeleaf:
+    cache: false
+    encoding: UTF-8
     
 forum:
   roles:
