@@ -1,20 +1,55 @@
+forum:
+  roles:
+    student: student
+    professor: professor
+    
+---
+
 spring:
+  profiles: production
+
   #Datasource
   datasource:
     url: jdbc:mysql://localhost:3306/forum
     username: root
     password: root
+    
   #JPA
   jpa:
     show-sql: false
     hibernate:
       ddl-auto: update
+      
+  #Thymeleaf
+  thymeleaf:
+    cache: true
+    encoding: UTF-8
+    
+#Logging
+logging:
+  file: forum.log
+  path: /var/log
+  level:
+    root: WARN
+    
+---
+
+spring:
+  profiles: development
+    
+  #JPA
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+      
   #Thymeleaf
   thymeleaf:
     cache: false
     encoding: UTF-8
     
-forum:
-  roles:
-    student: Student
-    professor: Professor
+
+#Logging
+logging:
+  level:
+    root: INFO

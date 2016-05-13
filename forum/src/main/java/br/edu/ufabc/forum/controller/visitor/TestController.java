@@ -1,4 +1,4 @@
-package br.edu.ufabc.forum.controller;
+package br.edu.ufabc.forum.controller.visitor;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
