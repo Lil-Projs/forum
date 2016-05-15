@@ -16,20 +16,8 @@ public class MessageResource {
 	@Autowired
 	private MessageSource messageSource;
 
-	public String get(String key, Locale locale) {
-		return messageSource.getMessage(key, null, String.format(defaultMessage, key), locale);
-	}
-
-	public String get(String key, Object[] params, Locale locale) {
-		return messageSource.getMessage(key, params, String.format(defaultMessage, key), locale);
-	}
-
 	public String get(String key) {
 		return messageSource.getMessage(key, null, String.format(defaultMessage, key), locale);
-	}
-
-	public String get(String key, Object[] params) {
-		return messageSource.getMessage(key, params, String.format(defaultMessage, key), locale);
 	}
 
 	public Locale getLocale() {

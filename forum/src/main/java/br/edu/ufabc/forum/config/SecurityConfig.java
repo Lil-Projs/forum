@@ -40,7 +40,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter { // NOPMD by g
 	 * Also sets the login page's URL and failure URL.
 	 */
 	@Override
-	protected void configure(final HttpSecurity http) throws Exception { // NOPMD by giulio on 5/13/16 4:16 AM
+	protected void configure(HttpSecurity http) throws Exception { // NOPMD by giulio on 5/13/16 4:16 AM
 		http. // NOPMD by giulio on 5/13/16 4:00 AM
 			authorizeRequests()
 				.antMatchers("/professorArea/**").hasRole(authorities.getProfessor())
@@ -59,7 +59,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter { // NOPMD by g
 	 * Configures the method to authenticate an user. In the project, via database.
 	 */
 	@Override
-	protected void configure(final AuthenticationManagerBuilder auth) throws Exception { // NOPMD by giulio on 5/13/16 4:16 AM
+	protected void configure(AuthenticationManagerBuilder auth) throws Exception { // NOPMD by giulio on 5/13/16 4:16 AM
 		auth
 			.userDetailsService(new UserDetailsService() {
 				

@@ -47,7 +47,7 @@ public class ExternationalizationConfig extends WebMvcAutoConfigurationAdapter {
 	 * Adds this LocaleChangeInterceptor to the build's interceptors.
 	 */
 	@Override
-	public void addInterceptors(final InterceptorRegistry registry) {
+	public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(localeChangeInterceptor());
     }
 

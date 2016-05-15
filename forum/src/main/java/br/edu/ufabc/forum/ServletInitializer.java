@@ -15,7 +15,7 @@ public class ServletInitializer extends SpringBootServletInitializer { // NOPMD 
 	 * @author Giulio Denardi
 	 */
 	@Override
-	protected SpringApplicationBuilder configure(final SpringApplicationBuilder application) {
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
 		return application.sources(ForumApplication.class);
 	}
 }
